@@ -18,5 +18,5 @@ public:  ///Metodos
 	///Metodos
 	void cargarVector(int v[], int n);
 	void mostrarVector(int v[], int n);
-		
+        void menor(int v[], int n);
 }
