@@ -1,0 +1,19 @@
+12.	Crear una clase Rectangulo para calcular su área, considerando que
+una clase utilizando el manual de referencia (https://docs.python.org/es/3/tutorial/classes.html)
+
+
+
+
+class Rectangulo:
+    """
+    Define un rectángulo según su base y su altura.
+    """
+    def __init__(self, b, h):
+        self.b = b
+        self.h = h
+
+    def area(self):
+        return self.b * self.h
+
+rectangulo = Rectangulo(20, 10)
+print("Área del rectángulo: ", rectangulo.area())
