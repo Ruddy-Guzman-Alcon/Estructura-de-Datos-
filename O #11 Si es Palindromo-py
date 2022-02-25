@@ -1,0 +1,17 @@
+11.	Definir una función es_palindromo() que reconoce palíndromos(es decir, palabras que tienen
+el mismo aspecto escritas invertidas), ejemplo: es_palindromo ("radar") tendría que devolver True.
+
+
+
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+ 
+def inversa (cadena):
+    invertida = ""
+    cont = len(cadena)
+    indice = -1
+    while cont >= 1:
+        invertida += cadena[indice]
+        indice = indice + (-1)
+        cont -= 1
+    return invertida
