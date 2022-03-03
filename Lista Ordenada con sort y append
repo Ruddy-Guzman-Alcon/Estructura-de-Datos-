@@ -1,0 +1,11 @@
+
+Lista =[] #= [3, 2, 999, 1, 15]
+
+numero= int(input("Escriba el numero de elemetnos de la siguiente lista : "))
+for i in range (numero):
+    Lista.append(int(input("Introduzca varios numeros :")))
+Lista.sort()
+
+print("Los numeros ordenaditos son " + str(Lista))
+    
+    
