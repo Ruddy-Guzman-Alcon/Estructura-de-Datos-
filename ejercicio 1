@@ -1,0 +1,90 @@
+class Matriz:
+    def __init__(self,filas,columnas):
+        self.matriz=[]
+        self.filas=filas
+        self.columnas=columnas
+        
+    def matrizCero(self):
+        for i in range(self.filas):
+            self.matriz.append([])
+            for j in range(self.columnas):
+                self.matriz[i].append(None)
+                
+
+    def llenarMatriz(self):
+        for i in range(self.filas):
+            for j in range(self.columnas):
+                if self.matriz[i][j]==None:
+                    z=float(input("Ingrese los numeros para la matriz: "))
+                    if z!=0:
+                        self.matriz[i][j]=z
+                    else:
+                        break
+                    if self.isFull()==True or z==0:
+                        break
+                if self.isFull()==True or z==0:
+                    break
+                
+    def mostrarMatriz(self):
+        for i in range(self.filas):
+            print(self.matriz[i])
+            
+    def isFull(self):
+        for i in range(self.filas):
+            for j in range(self.columnas):
+                if self.matriz[i][j]==None:
+                    return False
+            return True
+    
+    def suma(self):
+        suma=0
+        for i in range(self.filas):
+            for j in range(self.columnas):
+                if self.matriz[i][j]!=None:
+                    suma=suma+self.matriz[i][j]
+        return suma
+                    
+
+
+    def Lista_Menor(self,n):
+        x=[]
+        for i in range(self.filas):
+            for j in range(self.columnas):
+                t=self.matriz[i][j]
+                if t==None:
+                    t=0
+                if t<n:
+                    x.append(self.matriz[i][j])
+        return x
+    
+    def eliminarnumero(self,n):
+        k=False
+        for i in range(self.filas):
+            for j in range(self.columnas):
+                if self.matriz[i][j]==n:
+                    self.matriz[i][j]==None
+                    k=True
+                if k==True:
+                    break
+            if k==True:
+                break
+            
+            
+            
+m=Matriz(3,3)
+m.matrizCero()
+m.mostrarMatriz()
+#A
+m.llenarMatriz()
+m.mostrarMatriz()
+#B
+h=int(input("Ingrese un numero para eliminar: "))
+m.eliminarnumero(h)
+m.mostrarMatriz()
+#C
+k=m.suma()
+print("Suma de los elementos de la matriz: ",k)
+#D
+n=int(input("Ingrese un numero limite: "))
+lista=m.Lista_Menor(n)
+print(lista)
