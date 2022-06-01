@@ -1,0 +1,25 @@
+# ejemplo de uso de colas
+fruits=[]
+
+# incluyendo elementos push
+
+fruits.append("banana")
+fruits.append("grapes")
+fruits.append("mango")
+fruits.append("orange")
+
+
+# sacando elementos
+
+fruits_item=fruits.pop(0)
+# es el primer elemento de una lista 
+print(fruits_item)
+
+# nuevamente
+
+fruits_item= fruits.pop(0)
+print(fruits_item)
+
+# como queda la pila
+print(fruits)
+#  ["c","a"]
