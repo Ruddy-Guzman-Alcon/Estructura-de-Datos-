@@ -1,0 +1,41 @@
+def pares(x):
+    if x % 2 == 0:
+        return True
+    return False
+class Lista:
+    
+    def _init_(self,n):
+        self.n = n
+        self.elementos = 0
+        self.lista = []
+    def cargar(self):
+        for i in range(self.n):
+            a = int(input("ingrese los numeros:"))
+            if pares(a):
+                self.lista.append(a)
+    def eliminar(self):
+        if self.elementos <= 0:
+            print("esta vacia")
+            return
+        self.lista.pop()
+        self.elementos -= 1
+    def mostrar(self):
+        print(self.lista)
+    def contar(self):
+        cantidad =len(self.lista)
+        print(f"la cantidad de elementos que hay es:{cantidad}")
+n = int(input("ingrese el tamaño de la lista:"))
+choi = Lista(n)
+op = ""
+while op !=0:
+    print("-------")
+    print("MENU")
+    print("1.cargar elementos")
+    print("2.pasarlos a una cola")
+    print("0.salir del menu")
+    op= int(input("ingrese una opcion valida"))
+    if op == 1:
+        choi.cargar()
+    if op == 2:
+        
+        choi.mostrar()
