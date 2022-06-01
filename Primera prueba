@@ -1,0 +1,12 @@
+import os
+
+print(" \nCrear un archivo")
+print("=================")
+
+NOMBR_ARCHIVO = 'datos.txt'
+
+archivo = open(NOMBR_ARCHIVO,'w' ) #abre el archivo datos.txt
+archivo.write('Cada vez que pienso en ti \nMis ojos rompen en llanto \nY muy triste me pregunto \n¿por qué te quiero tanto?')
+archivo.close()
+#verifique que el archivo ha sido creado
+if NOMBRE_ARCHICO is os.listdir("."):
